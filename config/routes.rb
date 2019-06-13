@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get 'hosts/index'
   root 'application#index'
+
+  get '/signin', to: 'sessions#sign_in'
+  post '/signin', to: 'sessions#create'
 end
